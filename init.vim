@@ -4,6 +4,7 @@ inoremap <silent><expr> <cr> "\<c-g>u\<CR>"
 
 " set rootdir to git root
 autocmd VimEnter * Gcd
+command! Mi MagmaInit
 
 " set leader to spacebar
 let mapleader = " "
@@ -19,6 +20,7 @@ set number relativenumber
 
 " command to generate ctags
 command! MakeTags !ctags -R .
+command! So source ~/.config/nvim/init.vim
 
 " netrw settings
 let g:netrw_banner=0
@@ -29,12 +31,19 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 
 " For touchbar macs
 inoremap § <esc>
+
 " Telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
+" Magma remaps
+nnoremap <silent>       <leader>rr :MagmaEvaluateLine<CR>
+nnoremap <silent>       <leader>rc :lua close_float()<CR>
+xnoremap <silent>       <leader>r  :<C-u>MagmaEvaluateVisual<CR>
+
+" Nerdtree
 nnoremap <c-a> :NERDTreeToggle<cr>
-nnoremap <cr> :nohl<cr>
+" nnoremap <cr> :nohl<cr>
 
 
 command Uhmm :!more ~/vim_commands
@@ -78,6 +87,7 @@ Plug 'L3MON4D3/LuaSnip'             " Required
 Plug 'rafamadriz/friendly-snippets' " Optional
 
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -96,7 +106,22 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.setup()
-EOF
 
+function close_float()
+	-- removes any stuck floating window
+    if table.getn(vim.api.nvim_list_wins()) > 1 then
+        print('letsfuckoingog')
+        for _, win in ipairs(vim.api.nvim_list_wins()) do
+            print(win)
+--             local config = vim.api.nvim_win_get_config(win)
+-- if config.relative ~= "" then
+--                 vim.api.nvim_win_close(win, false)
+--                 print("Closing window", win)
+--             end
+        end
+    end
+end
+
+EOF
 
 
