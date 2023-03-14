@@ -32,6 +32,10 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 " For touchbar macs
 inoremap § <esc>
 
+" Git gud
+nnoremap <leader>gs <cmd>Gvdiffsplit<cr>
+
+
 " Telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
