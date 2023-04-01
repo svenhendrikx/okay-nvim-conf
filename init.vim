@@ -34,6 +34,9 @@ inoremap § <esc>
 
 " tagbar
 nnoremap <c-s> :TagbarToggle<CR><c-w>l
+" Git gud
+nnoremap <leader>gs <cmd>Gvdiffsplit<cr>
+
 
 " Telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
