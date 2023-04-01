@@ -32,14 +32,21 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 " For touchbar macs
 inoremap § <esc>
 
+" tagbar
+nnoremap <c-s> :TagbarToggle<CR><c-w>l
+
 " Telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nmap <leader>fw viwy<cmd>Telescope live_grep<CR>
 
 " Magma remaps
 nnoremap <silent>       <leader>rr :MagmaEvaluateLine<CR>
 nnoremap <silent>       <leader>rc :lua close_float()<CR>
 xnoremap <silent>       <leader>r  :<C-u>MagmaEvaluateVisual<CR>
+
+" Python breakpoint
+nnoremap <silent>       <leader>bp obreakpoint()<esc>
 
 " Nerdtree
 nnoremap <c-a> :NERDTreeToggle<cr>
@@ -57,6 +64,7 @@ set expandtab
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'leafOfTree/vim-svelte-plugin'
