@@ -99,7 +99,7 @@ Plug 'rafamadriz/friendly-snippets' " Optional
 
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 Plug 'tpope/vim-surround'
-
+Plug 'ellisonleao/glow.nvim'
 call plug#end()
 
 
@@ -133,6 +133,12 @@ function close_float()
     end
 end
 
+require('glow').setup({
+  border = "shadow", -- floating window border config
+  style = "dark", -- filled automatically with your current editor background, you can override using glow json style
+  width_ratio = 0.9, -- maximum width of the Glow window compared to the nvim window size (overrides `width`)
+  height_ratio = 0.9,
+})
 EOF
 
 
