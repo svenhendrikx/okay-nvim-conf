@@ -41,7 +41,7 @@ nnoremap <leader>gs <cmd>Gvdiffsplit<cr>
 " Telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nmap <leader>fw viwy<cmd>Telescope live_grep<CR>
+nnoremap <leader>fh <cmd>Telescope find_files hidden=true<cr>
 
 " Magma remaps
 nnoremap <silent>       <leader>rr :MagmaEvaluateLine<CR>
