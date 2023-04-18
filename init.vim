@@ -50,6 +50,7 @@ xnoremap <silent>       <leader>r  :<C-u>MagmaEvaluateVisual<CR>
 
 " Python breakpoint
 nnoremap <silent>       <leader>bp obreakpoint()<esc>
+nnoremap <silent>       <leader>bi oimport code; code.interact(local=locals())<esc>
 
 " Nerdtree
 nnoremap <c-a> :NERDTreeToggle<cr>
