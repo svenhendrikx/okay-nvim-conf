@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
+    use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
     use "lukas-reineke/indent-blankline.nvim"
     use 'm4xshen/autoclose.nvim'
 	use 'mbbill/undotree'

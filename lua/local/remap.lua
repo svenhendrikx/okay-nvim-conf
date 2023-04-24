@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- For touchbar macs
 vim.keymap.set("i", "§", "<esc>")
@@ -9,8 +8,14 @@ vim.keymap.set("n", "<c-s>", ":TagbarToggle<CR><c-w>l" )
 -- Git gud
 vim.keymap.set("n", "<leader>gs", "<cmd>Gvdiffsplit<cr>" )
 
--- Git gud
+-- Indentation lines
 vim.keymap.set("n", "<leader>id", "<cmd>IndentLinesToggle<cr>" )
+
+-- Mason
+vim.keymap.set("n", "<leader>ma", "<cmd>Mason<cr>" )
+
+-- Mason
+vim.keymap.set("n", "<leader>gl", "<cmd>Glow<cr>" )
 
 -- Python breakpoint
 vim.keymap.set("n", "<leader>bp", "obreakpoint()<esc>" )
