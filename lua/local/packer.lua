@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
+    use "lukas-reineke/indent-blankline.nvim"
     use 'm4xshen/autoclose.nvim'
 	use 'mbbill/undotree'
 	use 'tpope/vim-fugitive'

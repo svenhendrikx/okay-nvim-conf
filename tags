@@ -32,6 +32,7 @@
 !_TAG_PROGRAM_VERSION	6.0.0	/p6.0.20221218.0/
 ColorMyPencils	after/plugin/colors.lua	/^function ColorMyPencils(color)$/;"	f
 Installation	README.md	/^# Installation$/;"	c
+Requirements	README.md	/^# Requirements$/;"	c
 error_msg	plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
 run	lua/local/packer.lua	/^			run = function()$/;"	f
 save_profiles	plugin/packer_compiled.lua	/^local function save_profiles(threshold)$/;"	f

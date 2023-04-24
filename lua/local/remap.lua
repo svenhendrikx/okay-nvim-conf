@@ -9,6 +9,8 @@ vim.keymap.set("n", "<c-s>", ":TagbarToggle<CR><c-w>l" )
 -- Git gud
 vim.keymap.set("n", "<leader>gs", "<cmd>Gvdiffsplit<cr>" )
 
+-- Git gud
+vim.keymap.set("n", "<leader>id", "<cmd>IndentLinesToggle<cr>" )
 
 -- Python breakpoint
 vim.keymap.set("n", "<leader>bp", "obreakpoint()<esc>" )
@@ -20,10 +22,10 @@ vim.api.nvim_create_autocmd(
     { command = [[ Gcd ]] }
 )
 
-vim.api.nvim_create_autocmd(
-    "VimEnter",
-    { command = [[ silent !ctags -R ]] }
-)
+-- vim.api.nvim_create_autocmd(
+--     "VimEnter",
+--     { command = [[ silent !ctags -R ]] }
+-- )
 
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
