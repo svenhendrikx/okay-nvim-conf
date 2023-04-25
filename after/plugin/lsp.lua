@@ -1,7 +1,7 @@
 local lsp = require('lsp-zero')
-lsp.preset('recommended')
-
+lsp.preset('minimal')
 lsp.setup()
+
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
@@ -17,4 +17,10 @@ cmp.setup({
     ['<C-f>'] = cmp_action.luasnip_jump_forward(),
     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
   }
+})
+
+vim.diagnostic.config({
+  virtual_text ={
+      severity = vim.diagnostic.severity.ERROR
+  },
 })
