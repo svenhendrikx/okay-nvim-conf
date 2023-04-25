@@ -9,6 +9,10 @@ ctags
 # Installation
 
 ```
+install packer:
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 git clone git@github.com:svenhendrikx/okay-nvim-conf.git ~/.config/nvim
 
 <in vim>
@@ -16,6 +20,7 @@ git clone git@github.com:svenhendrikx/okay-nvim-conf.git ~/.config/nvim
     restart
 
 # The first time treesitter might take some time to download parsers
+# Also, you might have to run PackerSync a few times and restart in between for everything to get installed correctly
 ```
 
 For tag support, install ctags and run `ctags -R .` in the project root.
