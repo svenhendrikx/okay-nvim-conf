@@ -46,4 +46,12 @@ Cheatsheet:
     <C-^>       goto previous file
     <C-]>       follow tag
     <C-o>       go back up the tagstack
+
+    ys<selectionpattern><surroundpattern>
+    example:
+    ysiw" > surround word with "
+    ys$(  > surround remainder of line with ()
+    yst <p> > surround until next space with <p> </p>
+    ds"   > remove surrounding ""
+    cs"'  > replace surrounding "" with ''
 ```
