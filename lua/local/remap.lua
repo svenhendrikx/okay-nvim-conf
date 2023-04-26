@@ -21,6 +21,8 @@ vim.keymap.set("n", "<leader>gl", "<cmd>Glow<cr>" )
 vim.keymap.set("n", "<leader>bp", "obreakpoint()<esc>" )
 vim.keymap.set("n", "<leader>bi", "oimport code; code.interact(local=locals())<esc>" )
 
+-- Show help
+vim.keymap.set("n", "<leader>hmm", ":Glow ~/.config/nvim/README.md<cr>" )
 
 vim.api.nvim_create_autocmd(
     "VimEnter",
