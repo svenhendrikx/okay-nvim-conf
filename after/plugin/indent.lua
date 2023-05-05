@@ -3,3 +3,6 @@ require("indent_blankline").setup({
     show_current_context = true,
     show_current_context_start = true,
 })
+-- Indentation lines
+vim.keymap.set("n", "<leader>id", "<cmd>IndentBlanklineToggle<cr>" )
+

@@ -24,3 +24,5 @@ vim.diagnostic.config({
       severity = vim.diagnostic.severity.ERROR
   },
 })
+-- Mason
+vim.keymap.set("n", "<leader>ma", "<cmd>Mason<cr>" )
