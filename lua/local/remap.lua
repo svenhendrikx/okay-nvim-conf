@@ -8,7 +8,7 @@ vim.keymap.set("n", "<leader>gl", "<cmd>Glow<cr>" )
 
 -- Python breakpoint
 vim.keymap.set("n", "<leader>bp", "obreakpoint()<esc>" )
-vim.keymap.set("n", "<leader>bi", "oimport code; code.interact(local=locals())<esc>" )
+vim.keymap.set("n", "<leader>bi", "ofrom IPython import embed; embed()<esc>" )
 
 -- Show help
 vim.keymap.set("n", "<leader>hmm", ":Glow ~/.config/nvim/README.md<cr>" )
