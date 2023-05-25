@@ -3,23 +3,12 @@ vim.g.mapleader = " "
 -- For touchbar macs
 vim.keymap.set("i", "§", "<esc>")
 
--- tagbar
-vim.keymap.set("n", "<c-s>", ":TagbarToggle<CR><c-w>l" )
--- Git gud
-vim.keymap.set("n", "<leader>gs", "<cmd>Gvdiffsplit<cr>" )
-
--- Indentation lines
-vim.keymap.set("n", "<leader>id", "<cmd>IndentLinesToggle<cr>" )
-
--- Mason
-vim.keymap.set("n", "<leader>ma", "<cmd>Mason<cr>" )
-
 -- Mason
 vim.keymap.set("n", "<leader>gl", "<cmd>Glow<cr>" )
 
 -- Python breakpoint
 vim.keymap.set("n", "<leader>bp", "obreakpoint()<esc>" )
-vim.keymap.set("n", "<leader>bi", "oimport code; code.interact(local=locals())<esc>" )
+vim.keymap.set("n", "<leader>bi", "ofrom IPython import embed; embed()<esc>" )
 
 -- Show help
 vim.keymap.set("n", "<leader>hmm", ":Glow ~/.config/nvim/README.md<cr>" )
