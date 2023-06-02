@@ -7,7 +7,7 @@ vim.keymap.set("i", "§", "<esc>")
 vim.keymap.set("n", "<leader>gl", "<cmd>Glow<cr>" )
 
 -- Python breakpoint
-vim.keymap.set("n", "<leader>bp", "obreakpoint()<esc>" )
+vim.keymap.set("n", "<leader>bp", "oimport ipdb; ipdb.set_trace()<esc>" )
 vim.keymap.set("n", "<leader>bi", "ofrom IPython import embed; embed()<esc>" )
 
 -- Show help

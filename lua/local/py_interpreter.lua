@@ -20,6 +20,26 @@ function M.start_interpreter()
   -- vim.cmd('startinsert')
 end
 
+function M.run_env_var()
+  local filename = vim.api.nvim_buf_get_name(0)
+
+  local buf = vim.api.nvim_create_buf(false, true)
+  local win = vim.api.nvim_open_win(buf, true, {
+    relative = 'editor',
+    width = vim.o.columns,
+    height = vim.o.lines,
+    col = 0,
+    row = 0,
+  })
+  vim.api.nvim_win_set_option(win, 'spell', false)
+  vim.api.nvim_buf_set_option(buf, 'buftype', 'nofile')
+  vim.api.nvim_buf_set_option(buf, 'bufhidden', 'hide')
+  vim.api.nvim_buf_set_option(buf, 'swapfile', false)
+  vim.fn.termopen(os.getenv('VIM_CMD'))
+  -- vim.cmd('startinsert')
+end
+
+
 -- Send code from the current buffer to the Python interpreter
 function M.send_code()
   local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
