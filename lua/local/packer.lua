@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
 	use 'vim-airline/vim-airline' 
 	use 'vim-airline/vim-airline-themes' 
 	use 'tpope/vim-surround' 
+    use 'dense-analysis/ale'
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',

@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/root/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ale = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/ale",
+    url = "https://github.com/dense-analysis/ale"
+  },
   ["autoclose.nvim"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/autoclose.nvim",

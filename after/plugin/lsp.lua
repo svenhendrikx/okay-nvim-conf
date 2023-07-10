@@ -18,11 +18,13 @@ cmp.setup({
     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
   }
 })
+ function setlevel()
+     vim.diagnostic.config({
+         virtual_text ={
+             severity = vim.diagnostic.severity.ERROR
+         },
+     })
+ end
+ setlevel()
 
-vim.diagnostic.config({
-  virtual_text ={
-      severity = vim.diagnostic.severity.ERROR
-  },
-})
--- Mason
 vim.keymap.set("n", "<leader>ma", "<cmd>Mason<cr>" )
