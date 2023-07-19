@@ -2,6 +2,10 @@ local lsp = require('lsp-zero')
 lsp.preset('minimal')
 lsp.setup()
 
+local signature_cfg = {}  -- add your config here
+require "lsp_signature".setup(signature_cfg)
+
+
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
