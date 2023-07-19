@@ -9,6 +9,8 @@ cmp.setup({
   mapping = {
     -- `Enter` key to confirm completion
     ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<Tab>'] = cmp_action.tab_complete(),
+    ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
 
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
@@ -18,13 +20,32 @@ cmp.setup({
     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
   }
 })
- function setlevel()
-     vim.diagnostic.config({
-         virtual_text ={
-             severity = vim.diagnostic.severity.ERROR
-         },
-     })
- end
- setlevel()
+function setlevelerr()
+    vim.diagnostic.config({
+        virtual_text ={
+            severity = vim.diagnostic.severity.ERROR
+        },
+    })
+end
+
+function setlevelwarn()
+    vim.diagnostic.config({
+        virtual_text ={
+            severity = vim.diagnostic.severity.WARNING
+        },
+    })
+end
+setlevelerr()
+local level = 'err'
+function togglelevel()
+    if level == 'warn' then
+        setlevelerr()
+        level = 'err'
+    else
+        setlevelwarn()
+        level = 'warn'
+    end
+end
 
 vim.keymap.set("n", "<leader>ma", "<cmd>Mason<cr>" )
+vim.keymap.set("n", "<leader>wa", togglelevel)
