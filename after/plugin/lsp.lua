@@ -1,11 +1,18 @@
-local lsp = require('lsp-zero')
-lsp.preset('minimal')
-lsp.setup()
+local lsp_zero = require('lsp-zero')
 
-local signature_cfg = {}  -- add your config here
-require "lsp_signature".setup(signature_cfg)
+lsp_zero.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  lsp_zero.default_keymaps({buffer = bufnr})
+end)
 
-
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    lsp_zero.default_setup,
+  },
+})
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 

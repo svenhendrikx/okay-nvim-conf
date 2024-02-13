@@ -1,30 +1,16 @@
-A pretty complete vim config written in lua
+Simple and effective neovim config which sets up probably everything you need 
 
 # Requirements
 
 ```
-ctags
+neovim >= 0.8.0
 ```
 
 # Installation
 
 ```
-install packer:
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
 git clone git@github.com:svenhendrikx/okay-nvim-conf.git ~/.config/nvim
-
-<in vim>
-    :PackerSync
-    restart
-
-# The first time treesitter might take some time to download parsers
-# Also, you might have to run PackerSync a few times and restart in between for everything to get installed correctly
 ```
-
-For tag support, install ctags and run `ctags -R .` in the project root.
-For Markdown support, install glow (recommended)
 
 Cheatsheet:
 ```
