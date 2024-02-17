@@ -15,6 +15,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+
+    "robitx/gp.nvim",
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
