@@ -1,2 +1,3 @@
 require("gp").setup()
-vim.keymap.set("n", "<leader>id", "<cmd>IndentBlanklineToggle<cr>" )
+vim.keymap.set("v", "<leader>gi", ":<C-u>'<,'>GpImplement<cr>")
+vim.keymap.set("v", "<leader>gr", ":<C-u>'<,'>GpRewrite<cr>")
