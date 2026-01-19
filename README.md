@@ -9,7 +9,7 @@ neovim >= 0.8.0
 # Installation
 
 ```
-git clone git@github.com:svenhendrikx/okay-nvim-conf.git ~/.config/nvim
+git clone https://github.com/svenhendrikx/okay-nvim-conf.git ~/.config/nvim
 ```
 
 Cheatsheet:
